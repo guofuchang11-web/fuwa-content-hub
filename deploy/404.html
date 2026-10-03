@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>福娃内容中台系统</title>
+  <script>
+    // GitHub Pages SPA 路由回退
+    // 将404请求重定向到index.html，保留路径和查询参数
+    var redirect = sessionStorage.redirect;
+    delete sessionStorage.redirect;
+    if (redirect && redirect != location.href) {
+      history.replaceState(null, null, redirect);
+    }
+  </script>
+</head>
+<body>
+  <script>
+    // 如果直接访问404页面，重定向到首页
+    if (!sessionStorage.redirect) {
+      location.replace('/');
+    }
+  </script>
+</body>
+</html>

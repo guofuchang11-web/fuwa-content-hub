@@ -1,0 +1,11 @@
+# Netlify 前端路由重定向配置
+# 福娃内容中台系统 - SPA 单页应用路由
+
+# 所有路由重定向到 index.html（SPA模式）
+/*    /index.html   200
+
+# API 代理（如果后端部署在其他域名，取消注释并修改）
+# /api/*    https://your-backend-api.com/api/:splat    200
+
+# 静态资源缓存（一年）
+/assets/*    /assets/:splat    200!
